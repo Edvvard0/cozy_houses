@@ -751,10 +751,13 @@ function initYandexMap() {
                     zoom: 16
                 });
                 
-                // Добавляем метку
+                // Добавляем метку с зеленой иконкой домика и текстом "Уютные дома"
                 const placemark = new ymaps.Placemark(coords, {
                     balloonContent: address,
-                    iconCaption: address
+                    iconCaption: 'Уютные дома'
+                }, {
+                    preset: 'islands#greenHomeIcon',
+                    iconColor: '#1bad03'
                 });
                 
                 map.geoObjects.add(placemark);
@@ -767,7 +770,11 @@ function initYandexMap() {
                 });
                 
                 const placemark = new ymaps.Placemark([44.9511, 34.1024], {
-                    balloonContent: address
+                    balloonContent: address,
+                    iconCaption: 'Уютные дома'
+                }, {
+                    preset: 'islands#greenHomeIcon',
+                    iconColor: '#1bad03'
                 });
                 
                 map.geoObjects.add(placemark);
